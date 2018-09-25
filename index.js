@@ -141,9 +141,13 @@ function moveDodger(e) {
   document.addEventListener('keydown',function(e){
   if (e.which===LEFT_ARROW){
     moveDodgerLeft()
+    e.stopPropagation();
+		e.preventDefault();
   }
   if (e.which===RIGHT_ARROW){
     moveDodgerRight()
+    e.stopPropagation();
+		e.preventDefault();
   }
   })
 }
